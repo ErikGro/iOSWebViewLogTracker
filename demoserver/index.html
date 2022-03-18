@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo website</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        html,
+        body {
+            touch-action: none;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            row-gap: 10px;
+        }
+
+        button {
+            width: 16em;
+            background-color: #354c6f;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            border-radius: 6px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button onClick="log()">
+            console.log
+        </button>
+        <button onClick="logInfo()">
+            console.info
+        </button>
+        <button onClick="logWarn()">
+            console.warn
+        </button>
+        <button onClick="logError()">
+            console.error
+        </button>
+        <button onClick="logDebug()">
+            console.debug
+        </button>
+        <button onClick="createError()">
+            Throw a javascript error
+        </button>
+    </div>
+
+    <script type="text/javascript">
+        function log() {
+            console.log("This is a log.");
+        }
+
+        function logInfo() {
+            console.info("This is an info log.");
+        }
+
+        function logWarn() {
+            console.warn("This is a warn log.");
+        }
+
+        function logError() {
+            console.error("This is an error log.");
+        }
+
+        function logDebug() {
+            console.debug("This is a debug log.");
+        }
+
+        function createError() {
+            let oops = iAmNotDefined;
+        }
+    </script>
+</body>
+
+</html>
